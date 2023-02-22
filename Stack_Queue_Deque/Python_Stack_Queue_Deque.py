@@ -3,6 +3,7 @@ from collections import deque
 
 myList = list()
 
+
 myList.append(1)  # en başa ekler stack mantıgı ile çalışır
 myList.append(2)
 myList.append(3)
@@ -38,7 +39,7 @@ myQueue.put(4)
 
 
 print("Queue get:",myQueue.get()) # Queue veri yapısı gibi en ilk giren veriyi çıkarır
-print()
+print("Max ",myQueue.maxsize)
 
 #---------------------------------------------------------------------------
 
@@ -51,5 +52,8 @@ mydeque.append(3)
 mydeque.appendleft(4)
 mydeque.appendleft(5)
 
+print("max len", len(mydeque))
 for i in range(len(mydeque)):
     print(mydeque.pop())
+    mydeque.popleft()
+    mydeque.po
