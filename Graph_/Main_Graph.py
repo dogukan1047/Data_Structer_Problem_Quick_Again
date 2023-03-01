@@ -1,15 +1,14 @@
 class Graph:
     def __init__(self):
-        self.adjDict = {}
+        self.adjDict = {}# graph
 
-    def addVertex(self, vertex):
+    def addVertex(self, vertex):# Bir vertex(Node) eklenmesi
         if vertex not in self.adjDict.keys():
             self.adjDict[vertex] = []
             return True
         return False
 
-    def addEdge(self, v1, v2):
-
+    def addEdge(self, v1, v2):# Bağlantı ekledik
         if v1 in self.adjDict.keys() and v2 in self.adjDict.keys():
             self.adjDict[v1].append(v2)
             self.adjDict[v2].append(v1)
